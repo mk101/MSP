@@ -135,7 +135,7 @@ class _HomePageState extends State<HomePage> {
               childCount: _futureWeather!.length,
                   (context, index) => ExpansionTile(
                     title: Text('${_futureWeather![index].time.day}.${_futureWeather![index].time.month} ${_futureWeather![index].time.hour}:${_futureWeather![index].time.minute}  ${_futureWeather![index].temperature > 0 ? '+' : ''}${_futureWeather![index].temperature.round()}$_temperatureSign  ${_futureWeather![index].type}'),
-                    leading: Image.network('http://openweathermap.org/img/w/${_futureWeather![index].icon}.png'),
+                    leading: Image.network('http://openweathermap.org/img/wn/${_futureWeather![index].icon}@2x.png'),
                     children: [
                       Text('Feels like ${_futureWeather![index].feelsLike > 0 ? '+' : ''}${_futureWeather![index].feelsLike}$_temperatureSign'),
                       Text('Pressure ${_futureWeather![index].pressure} hPa'),
